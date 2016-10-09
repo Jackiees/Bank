@@ -1,0 +1,103 @@
+<!-- <ion-view view-title="" class="codescreen"> -->
+<ion-view view-title="Rekeningen" hide-nav-bar="true" class="codescreen_rekeningen">
+  <ion-header-bar class="bar-stable bar bar-header" style="background-color:#F3F3F3!important;">
+    <div class="buttons buttons-left header-item">
+      <span class="left-buttons">
+        <button class="button button-icon button-clear ion-navicon rekeningen" menu-toggle="left"></button>
+      </span>
+    </div>
+    <div class="title title-center header-item" style="font-weight:400!important;color:#151515!important;">
+    <!-- <div class="title title-center header-item" style="color: #FBD14B!important;"> -->
+      Rekeningen
+    </div>
+    <div class="buttons buttons-right header-item">
+      <span class="right-buttons">
+        <button class="button button-icon button-clear ion-eye rekeningen"></button>
+      </span>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="content">
+
+      <div class="betaalrek">
+        <div class="titel_rekening">Betaalrekeningen</div>
+        <div class="euro">Euro (€)</div>
+      </div>
+
+      <div class="accounts" ng-repeat="account in data.accounts" ng-click="open($index,1)">
+        <div class="" style="height:60px;width:100%;">
+          <div class="naam">{{account.name}}
+            <div class="rekeningnummer">{{account.number}}</div>
+          </div>
+          <div class="bedrag">
+            {{account.amount}},<div class="centen">{{account.cents}}</div>
+          </div>
+        </div>
+        <div class="opties" ng-show="account.open">
+          <div class="afbij" ng-click="afenbij()">
+            <span class="ion-shuffle" style="font-size:180%;"></span><br>
+            Af & Bij
+          </div>
+          <div class="overschrijven">
+            <span class="ion-shuffle" style="font-size:180%;"></span><br>
+            Overschrijven
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="" ng-show="true">
+        A
+      </div> -->
+
+      <div class="spaarrek">
+        <div class="titel_rekening">Spaarrekeningen</div>
+      </div>
+
+      <div class="accounts" ng-repeat="account in data.savings" ng-click="open($index,2)">
+        <div class="" style="height:60px;width:100%;">
+          <div class="naam">{{account.name}}
+            <div class="rekeningnummer">{{account.number}}</div>
+          </div>
+          <div class="bedrag">
+            {{account.amount}},<div class="centen">{{account.cents}}</div>
+          </div>
+        </div>
+        <div class="opties" ng-show="account.open">
+          <div class="afbij">
+            <span class="ion-shuffle" style="font-size:180%;"></span><br>
+            Af & Bij
+          </div>
+          <div class="overschrijven">
+            <span class="ion-shuffle" style="font-size:180%;"></span><br>
+            Overschrijven
+          </div>
+        </div>
+      </div>
+
+      <div class="creditrek">
+        <div class="titel_rekening">Creditcards</div>
+      </div>
+
+      <div class="accounts" ng-repeat="account in data.creditcards">
+        <div class="" style="float:left;">
+          <img src="img/creditcard.jpg" width="60" height="38.49"/>
+        </div>
+        <!-- <div style="float:left;margin-top:38px;color:#909090;font-size:90%;"> -->
+        <div style="font-family: 'Nunito', sans-serif;
+        font-weight: 300;
+        float:left;color:#909090;font-size:90%;margin-left:10px;width:70%;height:60px;">
+          <e style="font-size:120%;color:#151515;">Creditcard</e><br>
+          HR. C.H. Lam
+        </div>
+        <br>
+        <div class="naam" style="margin-top:-20px;">
+          <div class="rekeningnummer">
+            kaartnr. 3987 **** **** 8764
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

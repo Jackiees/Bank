@@ -1,0 +1,367 @@
+/* Empty. Add your own CSS if you like */
+
+ion-content {
+  /*background-color: #FF6201;*/
+  /*background-color: #96AFB4;*/
+  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  position: relative;
+}
+
+/*
+  Colous:
+  -Orange: #FF6201
+  -Light grey: #909090
+*/
+
+.menu_background {
+  /*background-color: 	#696969;*/
+  /*background-color: #FF6201;*/
+  background-color: #4C535D;
+  /*font-family: 'Montserrat', sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+}
+
+.item {
+  color: white;
+  font-weight: 300;
+  border:1px solid #909090;
+}
+
+.item-content {
+  background-color: #4C535D!important
+}
+
+.item-complex .item-content {
+  padding-bottom: 7px;
+}
+
+.icon {
+  font-size: 26px!important;
+  margin-top:-5px;
+  margin-right: 10px;
+  width: 30px;
+  float: left;
+  display: block;
+}
+
+.codescreen {
+  /*background-color: #EB4E3D!important;*/
+  /*background-color: #FBD14B!important;*/
+  background-color: #FF6201!important;
+  background-image: none!important;
+}
+
+.codescreen_rekeningen {
+  background-color: white!important;
+}
+
+.codescreen_nav {
+  color: white!important;
+}
+
+.bar.bar-stable {
+  /*background-color: #EB4E3D!important;*/
+  background-color: #FF6201!important;
+  background-image: none!important;
+}
+
+.bar.bar-stable .title {
+  color: white!important;
+}
+
+/*.scroll-content {*/
+  /*background: url("../img/Amsterdam.jpg") no-repeat center center fixed;*/
+/*}*/
+
+.head {
+  height: 28vh;
+  padding-top: 55px;
+  text-align: center;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-size: 70px;
+  line-height: 40px;
+  /*color: #FBD14B;*/
+  color: #444;
+  /*background-color: #FF6201;*/
+}
+
+.title {
+  /*color:white;*/
+  font-weight: 300!important;
+}
+
+.middle {
+  height: 30vh;
+  /*background-color: #FF6201;*/
+}
+
+.end {
+  /*height: 40vh;*/
+  /*background-color: #FF6201;*/
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/*
+http://stackoverflow.com/questions/27140770/css-slide-animation-with-angularjs
+http://stackoverflow.com/questions/22425013/css-transition-not-working-with-ng-class
+*/
+
+.slide {
+  max-height: 999px;
+  /*opacity: 1;*/
+  /*transition: 5s ease bottom !important;*/
+  -webkit-transition: height .8s ease;
+  transition: all .8s ease;
+}
+
+.slide.ng-hide {
+  z-index: 9999;
+  -webkit-transition: height .4s ease;
+  transition: all .4s ease;
+  /*-webkit-transition: height .3s ease-in-out;*/
+  /*transition: all .3s ease-in-out;*/
+  max-height: 0;
+  /*opacity: 0;*/
+}
+
+.back_icon {
+  width: 100;
+  text-align: center;
+  font-size: 24px;
+  color: #FBB582;
+}
+
+.input_tiles {
+  background-color: #F3F3F3;
+  width: 33.3333%;
+  height: 60px;
+  float: left;
+  text-align: center;
+  font-size: 30px;
+  line-height: 60px;
+  color: #696969;
+  /*font-weight: 900;*/
+  border-bottom: 1px solid white;
+}
+
+.middle_tile {
+  width: (33.33 - 2px);
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.letters {
+  color: #a9a9a9;
+  margin-top: -40px;
+  font-size: 10px;
+}
+
+.code_block {
+  background-color: white;
+  font-family: 'Lalezar', cursive;
+  height: 66.5px;
+  width: 66.5px;
+  border-radius: 3px;
+  float: left;
+  /*color: #444;*/
+  color:#FF6201;
+  /*margin-top: 135px;*/
+  margin-left: 7px;
+  box-shadow: inset 0px 0px 10px 0px #DDDDDD;
+  -webkit-box-shadow: inset 0px 0px 10px 0px #DDDDDD;
+  -moz-box-shadow: inset 0px 0px 10px 0px #DDDDDD;
+  -o-box-shadow: inset 0px 0px 10px 0px #DDDDDD;
+  /*box-shadow: inset 0px 0px 10px 0px #DDDDDD;
+  -webkit-box-shadow: inset 0px 0px 10px 0px #DDDDDD;
+  -moz-box-shadow: inset 0px 0px 10px 0px #DDDDDD;
+  -o-box-shadow: inset 0px 0px 10px 0px #DDDDDD;*/
+  text-align: center;
+  font-size: 95px;
+  line-height: 95px;
+  /*font-weight: 500;*/
+  /*padding-top:35px;*/
+  /*padding-top:47px;*/
+  padding: 10px;
+}
+
+.empty {
+  background-color: #FF914C;
+  box-shadow: none;
+}
+
+.rekeningen {
+  /*color: #FF6201!important;*/
+  color: #FF6201;
+}
+
+.afenbij {
+  color: #FF6201!important;
+}
+
+.content {
+  /*padding: 15px;*/
+  padding-top: 15px;
+}
+
+.betaalrek {
+  padding: 0px 15px;
+  height: 20px;
+}
+
+.spaarrek {
+  padding: 10px 15px;
+  height: 30px;
+  margin-top: 10px;
+  /*border-top:1px solid #F3F3F3;*/
+}
+
+.creditrek {
+  padding: 10px 15px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  /*border-top:1px solid #F3F3F3;*/
+}
+
+.accounts {
+  padding: 0px 15px;
+  /*height: 80px;*/
+  /*height:60px;*/
+  /*margin-bottom: 30px;*/
+}
+
+.titel_rekening {
+  color: #FF6201;
+  font-family: 'Nunito', sans-serif;
+  float: left;
+  height: auto;
+}
+
+.euro {
+  float: right;
+  color: #909090;
+  height: auto;
+}
+
+.naam {
+  margin-top: 10px;
+  color: #151515;
+  font-size: 115%;
+  float: left;
+  height: auto;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}
+
+.naam .rekeningnummer {
+  padding-top: 5px;
+  color: #FF6201;
+  font-size:80%!important;
+  /*font-family: 'Roboto', sans-serif!important;*/
+}
+
+.bedrag {
+  margin-top: 10px;
+  float: right;
+  font-family: 'Nunito', sans-serif;
+  font-size: 130%;
+}
+
+.centen {
+  float: right;
+  font-size: 57%;
+  margin-top:-3px;
+}
+
+.rekeningvak_top {
+  height:85px;
+  padding: 0px 15px 0px 15px;
+  /*border-bottom:1px solid #F3F3F3;*/
+  /*margin-bottom:12px;*/
+}
+
+.rekeningvak_top2 {
+  height:120px;
+  padding: 0px 15px 0px 15px;
+}
+
+.borderline {
+  border-top:1px solid #F3F3F3;
+  margin-top: 10px;
+  /*margin: 0px 15px 0px 15px;*/
+}
+
+.rekeningvak {
+  height:65px;
+  padding: 0px 15px 0px 15px;
+  /*border-bottom:1px solid #F3F3F3;*/
+  /*margin-bottom:12px;*/
+}
+
+.opties {
+  /*background-color: #FF6201;*/
+  height: 60px!important;
+  margin: 0px -15px;
+  /*border-top: 0.5px solid #999999;*/
+  /*margin-bottom: 5px;*/
+  height: auto;
+  /*padding: 8px 15px 0px 15px;*/
+  color:white;
+  text-align: center;
+  font-weight: 100;
+}
+
+.afbij {
+  width: 50%;
+  float: left;
+  height: 60px;
+  font-size: 90%;
+  padding-top: 8px;
+  /*margin-left: -15px;*/
+  /*border-top: 0.5px solid #999999;*/
+  /*http://lea.verou.me/2011/03/beveled-corners-negative-border-radius-with-css3-gradients/*/
+  background: linear-gradient(225deg, transparent 5px, #FF6201 0) top right;
+  /*position: absolute;*/
+  /*background-color: #FF6201;*/
+  /*height: auto;
+
+  color: white!important;
+  text-align: center;
+  font-weight: 100;
+  font-size: 90%;
+  padding-top: 10px;*/
+}
+
+.overschrijven {
+  width: 50%;
+  float: left;
+  height: 60px;
+  font-size: 90%;
+  padding-top: 8px;
+  /*margin-right: -30px;*/
+  /*border-top: 0.5px solid #999999;*/
+  background: linear-gradient(135deg, transparent 5px, #FF6201 0) top left;
+  /*background-color: #FF6201;*/
+  /*height: auto;
+  float: left;
+  color: white!important;
+  text-align: center;
+  font-weight: 100;
+  padding-top: 7px;*/
+}
+
+.icon2 {
+  /*margin-top:50px!important;*/
+  font-size: 250%;
+}
+
+.accounts .creditcard {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  float:left;color:#909090;font-size:90%;margin-left:10px;width:70%;height:60px;
+}

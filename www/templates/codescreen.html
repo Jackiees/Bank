@@ -1,0 +1,74 @@
+<!-- <ion-view view-title="a" class="codescreen"> -->
+  <ion-view view-title="codescreen" hide-nav-bar="true" class="codescreen">
+  <ion-header-bar class="bar-stable bar bar-header codescreen">
+    <div class="buttons buttons-left header-item">
+      <span class="left-buttons">
+        <button class="button button-icon button-clear ion-navicon codescreen_nav" menu-toggle="left"></button>
+      </span>
+    </div>
+    <div class="title title-center header-item titel">Inloggen
+    </div>
+  </ion-header-bar>
+  <ion-content scroll="false">
+
+    <div class="head">
+      <!-- <span class="ion-map"></span> &3m -->
+      <img src="img/ING_logo1.jpg" height="126.73" width="190" />
+    </div>
+
+    <div class="middle">
+
+      <div ng-repeat="n in [1,2,3,4,5] track by $index">
+        <div class="code_block empty" ng-if="input_code[n] === undefined" ng-click="open_input_field()"></div>
+        <div class="code_block" ng-if="input_code[n] !== undefined" ng-click="open_input_field()">*</div>
+        <!-- <div class="code_block" ng-if="input_code[n] !== undefined" ng-click="open_input_field()">{{input_code[n]}}</div> -->
+      </div>
+
+    </div>
+
+    <!-- <div ng-class="{'active':isdiplay}"> -->
+      <!-- <div class="end"> -->
+    <div class="end slide" ng-if="input_field">
+      <div class="back_icon" ng-click="open_input_field()">
+        <span class="ion-minus-round"></span>
+      </div>
+      <div class="input_tiles" ng-click="input(1)">
+        1
+      </div>
+      <div class="input_tiles middle_tile" ng-click="input(2)">
+        2<div class="letters">ABC</div>
+      </div>
+      <div class="input_tiles" ng-click="input(3)">
+        3<div class="letters">DEF</div>
+      </div>
+      <div class="input_tiles" ng-click="input(4)">
+        4<div class="letters">GHI</div>
+      </div>
+      <div class="input_tiles middle_tile" ng-click="input(5)">
+        5<div class="letters">JKL</div>
+      </div>
+      <div class="input_tiles" ng-click="input(6)">
+        6<div class="letters">MNO</div>
+      </div>
+      <div class="input_tiles" ng-click="input(7)">
+        7<div class="letters">PQRS</div>
+      </div>
+      <div class="input_tiles middle_tile" ng-click="input(8)">
+        8<div class="letters">TUV</div>
+      </div>
+      <div class="input_tiles" ng-click="input(9)">
+        9<div class="letters">WXYZ</div>
+      </div>
+      <div class="input_tiles" style="font-size:60px;line-height:60px;" ng-click="input()">
+
+      </div>
+      <div class="input_tiles middle_tile" ng-click="input(0)">
+        0
+      </div>
+      <div class="input_tiles" ng-click="delete()">
+        <span class="ion-backspace"></span>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
