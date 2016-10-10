@@ -73,6 +73,24 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers'])
       }
     })
 
+    .state('app.berichten', {
+      url: '/berichten',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/berichten.html'
+        }
+      }
+    })
+
+    .state('app.service', {
+      url: '/service',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/service.html'
+        }
+      }
+    })
+
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {

@@ -79,6 +79,17 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+  $scope.data = {
+    "accounts": [
+      {
+        "name": "Hr C.H. Lam",
+        "number": "NL29 INGB 0384 2067 98",
+        "amount": "4.358",
+        "cents": "76",
+        "open": false
+      }
+    ]
+  };
 })
 
 .controller('Af&BijCtrl', function($scope) {
@@ -90,6 +101,20 @@ angular.module('starter.controllers', [])
         "amount": "4.358",
         "cents": "76",
         "open": false
+      }
+    ],
+    "boekingen": [
+      {
+        "name": "Energiebedrijf",
+        "amount": "-70",
+        "cents": "34",
+        "date": "26 oktober"
+      },
+      {
+        "name": "T-Mobile",
+        "amount": "-49",
+        "cents": "50",
+        "date": "22 oktober"
       }
     ]
   };
@@ -147,6 +172,10 @@ angular.module('starter.controllers', [])
 
   $scope.afenbij = function () {
     $state.go('app.browse');
+  }
+
+  $scope.overschrijven = function () {
+    $state.go('app.single');
   }
 
   // console.log($scope.data);

@@ -365,3 +365,7 @@ http://stackoverflow.com/questions/22425013/css-transition-not-working-with-ng-c
   font-weight: 300;
   float:left;color:#909090;font-size:90%;margin-left:10px;width:70%;height:60px;
 }
+
+.boeking {
+  margin-bottom: 50px;
+}
