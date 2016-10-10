@@ -1,7 +1,7 @@
 {
-  "name": "123go",
+  "name": "Bankieren",
   "version": "1.1.1",
-  "description": "123go: An Ionic project",
+  "description": "Bankieren: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",

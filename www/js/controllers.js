@@ -72,7 +72,6 @@ angular.module('starter.controllers', [])
     }
   });
 
-
   $scope.delete = function() {
     $scope.input_code.splice(($scope.input_code.length-1),1);
   }
