@@ -41,7 +41,20 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('CodescreenCtrl', function($scope,$state,$window,$timeout) {
+.controller('CodescreenCtrl', function($scope,$state,$window,$timeout,$cordovaTouchID) {
+
+  $cordovaTouchID.checkSupport().then(function() {
+    // success, TouchID supported
+  }, function (error) {
+    alert(error); // TouchID not supported
+  });
+
+  $cordovaTouchID.authenticate("text").then(function() {
+    $window.location.href = '#/app/search';
+    // success
+  }, function () {
+    // error
+  });
 
   $scope.input_code = [];
   $scope.input_field = false;

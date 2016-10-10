@@ -6,18 +6,18 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers'])
 
-.run(function($ionicPlatform, $cordovaTouchID) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
 
-    $cordovaTouchID.checkSupport().then(function() {
-            $cordovaTouchID.authenticate("You must authenticate").then(function() {
-                alert("The authentication was successful");
-            }, function(error) {
-                alert(JSON.stringify(error));
-            });
-        }, function(error) {
-            alert(JSON.stringify(error));
-        });
+    // $cordovaTouchID.checkSupport().then(function() {
+    //         $cordovaTouchID.authenticate("You must authenticate").then(function() {
+    //             alert("The authentication was successful");
+    //         }, function(error) {
+    //             // alert(JSON.stringify(error));
+    //         });
+    //     }, function(error) {
+    //         // alert(JSON.stringify(error));
+    //     });
 
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
