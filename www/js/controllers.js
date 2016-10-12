@@ -92,34 +92,47 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('Af&BijCtrl', function($scope) {
+.controller('Af&BijCtrl', function($scope,$timeout) {
 
   $scope.open = function (index) {
     $scope.data.boekingen[index].open = !$scope.data.boekingen[index].open;
   }
 
+  $scope.loadMore = function() {
+
+      setTimeout(function () {
+        $scope.data.boekingen.push(
+          {"name": "1 Testpush","amount": "-70","cents": "34","date": "26 oktober","open": false,"tegenrekening": "NL 42 INGB 0123 4567 80",
+          "mutatiesoort": "Incasso"},
+          {"name": "2 Testpush","amount": "-70","cents": "34","date": "26 oktober","open": false,"tegenrekening": "NL 42 INGB 0123 4567 80",
+          "mutatiesoort": "Incasso"}
+        );
+
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+      }, 3000);
+   };
+
+  $scope.$on('$stateChangeSuccess', function() {
+    $scope.loadMore();
+  });
+
   $scope.data = {
     "accounts": [
-      {
-        "name": "Hr C.H. Lam",
-        "number": "NL29 INGB 0384 2067 98",
-        "amount": "4.358",
-        "cents": "76",
-        "open": false
-      }
+      {"name": "Hr C.H. Lam","number": "NL29 INGB 0384 2067 98","amount": "4.358","cents": "76","open": false}
     ],
     "boekingen": [
+      {"name": "4 Energiebedrijf","amount": "-70","cents": "34","date": "26 oktober","open": false,"tegenrekening": "NL 42 INGB 0123 4567 80",
+      "mutatiesoort": "Incasso"},
+      {"name": "5 Energiebedrijf","amount": "-70","cents": "34","date": "26 oktober","open": false,"tegenrekening": "NL 42 INGB 0123 4567 80",
+      "mutatiesoort": "Incasso"},
+      {"name": "6 Energiebedrijf","amount": "-70","cents": "34","date": "26 oktober","open": false,"tegenrekening": "NL 42 INGB 0123 4567 80",
+      "mutatiesoort": "Incasso"},
+      {"name": "7 Energiebedrijf","amount": "-70","cents": "34","date": "26 oktober","open": false,"tegenrekening": "NL 42 INGB 0123 4567 80",
+      "mutatiesoort": "Incasso"},
+      {"name": "8 Energiebedrijf","amount": "-70","cents": "34","date": "26 oktober","open": false,"tegenrekening": "NL 42 INGB 0123 4567 80",
+      "mutatiesoort": "Incasso"},
       {
-        "name": "Energiebedrijf",
-        "amount": "-70",
-        "cents": "34",
-        "date": "26 oktober",
-        "open": false,
-        "tegenrekening": "NL 42 INGB 0123 4567 80",
-        "mutatiesoort": "Incasso"
-      },
-      {
-        "name": "T-Mobile",
+        "name": "9 T-Mobile",
         "amount": "-49",
         "cents": "50",
         "date": "22 oktober",
@@ -128,28 +141,10 @@ angular.module('starter.controllers', [])
         "mutatiesoort": "Incasso"
       },
       {
-        "name": "Waterschapsbelastingen",
+        "name": "10 Waterschapsbelastingen",
         "amount": "-112",
         "cents": "11",
         "date": "21 oktober",
-        "open": false,
-        "tegenrekening": "NL 42 INGB 0123 4567 80",
-        "mutatiesoort": "Incasso"
-      },
-      {
-        "name": "Gemeente Amsterdam",
-        "amount": "-52",
-        "cents": "11",
-        "date": "17 oktober",
-        "open": false,
-        "tegenrekening": "NL 42 INGB 0123 4567 80",
-        "mutatiesoort": "Incasso"
-      },
-      {
-        "name": "Parkeergarage Schiphol",
-        "amount": "-12",
-        "cents": "00",
-        "date": "12 oktober",
         "open": false,
         "tegenrekening": "NL 42 INGB 0123 4567 80",
         "mutatiesoort": "Incasso"
