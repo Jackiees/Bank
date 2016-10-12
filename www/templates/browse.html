@@ -8,7 +8,7 @@
   <ion-header-bar class="bar-stable bar bar-header" style="background-color:#F3F3F3!important;">
     <div class="buttons buttons-left header-item">
       <span class="left-buttons">
-        <button ng-click="$ionicGoBack()" class="button button-icon button-clear ion-chevron-left afenbij"></button>
+        <button ng-click="$ionicGoBack()" class="button button-icon button-clear ion-ios-arrow-back afenbij"></button>
       </span>
     </div>
     <div class="title title-center header-item" style="font-weight:400!important;color:#151515!important;">
@@ -16,7 +16,7 @@
     </div>
     <div class="buttons buttons-right header-item">
       <span class="right-buttons">
-        <button class="button button-icon button-clear ion-search afenbij"></button>
+        <button class="button button-icon button-clear ion-ios-search afenbij"></button>
       </span>
     </div>
   </ion-header-bar>
@@ -29,7 +29,7 @@
         <div class="euro">Euro (€)</div>
       </div>
 
-      <div class="accounts" ng-repeat="account in data.accounts" ng-click="open($index,1)">
+      <div class="accounts" ng-repeat="account in data.accounts">
         <div class="" style="height:60px;width:100%;">
           <div class="naam">{{account.name}}
             <div class="rekeningnummer">{{account.number}}</div>
@@ -40,9 +40,51 @@
         </div>
       </div>
 
-      <div class="boeking" ng-repeat="boeking in data.boekingen">
-        <div class="" style="height:60px;width:100%;>
-          {{boeking.date}}
+      <div class="boeking" ng-repeat="boeking in data.boekingen" ng-click="open($index,1)">
+        <div class="" style="height:60px;width:100%;">
+          <div class="date">
+            {{boeking.date}}
+          </div>
+          <div class="info">
+            <span class="ion-document-text infoicon"></span>
+            <div style="float:left;font-size:102%;">
+              {{boeking.name}}
+            </div>
+            <div class="bedrag" style="float:right;margin-top:0px;font-weight:400;">
+              {{boeking.amount}},<div class="centen">{{boeking.cents}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="opties" style="height:10px!important;margin-top:20px;" ng-show="boeking.open">
+          <div class="afbij" style="background: linear-gradient(225deg, transparent 5px, #F3F3F3 0) top right;height:25px;"></div>
+          <div class="overschrijven" style="background: linear-gradient(135deg, transparent 5px, #F3F3F3 0) top left;height:25px;"></div>
+        </div>
+        <div class="detail" ng-show="boeking.open">
+          <div class="titel_rekening" style="font-weight:400!important;color:#656565;">Naam/Omschrijving/Mededeling</div><br>
+          Naam: {{boeking.name}}<br>
+          Factuur oktober 2016<br>
+          <!-- Mandaat: 123-456<br> -->
+          <br>
+
+          <div class="titel_rekening" style="font-weight:400!important;color:#656565;">Datum</div><br>
+          {{boeking.date}}<br><br>
+
+          <div class="titel_rekening" style="font-weight:400!important;color:#656565;">Tegenrekening</div><br>
+          {{boeking.tegenrekening}}<br><br>
+
+          <div class="titel_rekening" style="font-weight:400!important;color:#656565;">Mutatiesoort</div><br>
+          {{boeking.mutatiesoort}}
+
+        </div>
+        <div class="opties" style="margin-bottom:-20px;" ng-show="boeking.open">
+          <div class="afbij_icon" ng-click="afenbij()">
+            <span class="ion-ios-upload-outline" style="font-size:220%!important;"></span><br>
+            Delen
+          </div>
+          <div class="afbij_icon" ng-click="overschrijven()">
+            <span class="ion-ios-loop-strong" style="font-size:220%;"></span><br>
+            Terugboeken
+          </div>
         </div>
       </div>
 
