@@ -425,3 +425,37 @@ http://stackoverflow.com/questions/22425013/css-transition-not-working-with-ng-c
   color: #FF6201;
   margin-right: 15px;
 }
+
+.content_overschrijven {
+  padding: 15px;
+}
+
+.amount {
+  margin-top: 10px;
+  padding: 20px 0px;
+  border-top:1px solid #E8E8E8;
+  font-size: 200%;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}
+
+.ontvanger {
+  padding: 10px 0px;
+  border-top:1px solid #E8E8E8;
+}
+
+.button.button-positive {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  font-size: 110%;
+  width: 90%;
+  background-color: #FF6201;
+}
+
+.button.button-positive.activated {
+  background-color: #FF6201;
+  border-color: #FF6201;
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+}

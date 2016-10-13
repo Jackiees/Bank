@@ -16,9 +16,9 @@
   </ion-header-bar>
   <ion-content>
 
-    <div class="content">
+    <div class="content_overschrijven">
 
-      <div class="accounts" ng-repeat="account in data.accounts" ng-click="open($index,1)">
+      <div class="accounts" style="padding:0px;">
         <div class="" style="height:60px;width:100%;">
           <div class="naam">{{account.name}}
             <div class="rekeningnummer">{{account.number}}</div>
@@ -27,6 +27,36 @@
             {{account.amount}},<div class="centen">{{account.cents}}</div>
           </div>
         </div>
+      </div>
+
+      <div class="amount">
+        € 625,00
+      </div>
+
+      <div class="ontvanger">
+        Naam ontvanger<br>
+        Hr. J.J. Valkenburg
+      </div>
+
+      <div class="ontvanger">
+        Rekeningnummer (IBAN)<br>
+        NL 42 INGB 0123 4567 80
+      </div>
+
+      <div class="ontvanger">
+        Mededeling<br>
+        Huur voor oktober 2016
+      </div>
+
+      <div class="ontvanger">
+        Inplannen<br>
+        8 oktober 2016 - Maandelijks
+      </div>
+
+      <div class="ontvanger" style="text-align:center;">
+        <button class="button button-positive">
+          Inplannen
+        </button>
       </div>
 
     </div>
